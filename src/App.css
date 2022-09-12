@@ -1,38 +1,146 @@
+
+body{
+  background-color: #202435;
+  font-size: 62.5%;
+
+}
 .App {
-  text-align: center;
+  padding: 2em;
+  margin-top: 5rem;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+button{
+  background: none;
+  cursor: pointer;
+  border: 1px solid #00D8FF;
+  border-radius: 5px;
+  color: #fff;
+  display: block;
+  font-size: 1.6em;
+  font-weight: bold;
+  margin: 0.5em auto;
+  padding: 1.5em 3em;
+  position: relative;
+  text-transform: uppercase;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+button::after{
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+button:hover{
+  color: #202435;
 }
 
-.App-link {
-  color: #61dafb;
+button::before,button::after{
+  background-color: #00D8FF;
+  content: '';
+  position: absolute;
+  z-index: -1;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.app_BTN1::after{
+  height: 0;
+  left: 0;
+  top: 0;
+  width: 100%;
 }
+
+.app_BTN1:hover:after{
+  height: 100%;
+}
+
+.app_BTN2::after{
+  height: 100%;
+  left: 0;
+  top: 0;
+  width: 0;
+}
+.app_BTN2:hover:after{
+  width: 100%;
+}
+
+.app_BTN3::after{
+  height: 0;
+  left: 100%;
+  top: 0;
+  width: 0;
+}
+.app_BTN3:hover:after{
+  height: 100%;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+
+.app_BTN4::after{
+  height: 0;
+  top: 100%;
+  left: 0;
+  width: 0;
+}
+.app_BTN4:hover:after{
+  height: 100%;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+
+.app_BTN5::after{
+  height: 0;
+  top: 50%;
+  left: 50%;
+  width: 0;
+}
+.app_BTN5:hover:after{
+  height: 100%;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+
+.app_BTN6::before{
+  
+  height: 100%;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.app_BTN6::after{
+  background-color: #202435;
+  height: 100%;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+
+
+.app_BTN6:hover::after{
+  height: 0;
+  left: 50%;
+  top: 50%;
+  width: 0;
+}
+
+.app_BTN7{
+  overflow: hidden;
+}
+
+.app_BTN7::after{
+  height: 100%;
+  left: -35%;
+  top: 0;
+  width: 0;
+  transform: skew(50deg);
+  transition-duration: 1s;
+}
+.app_BTN7:hover:after{
+  height: 100%;
+  width: 1350%;
+}
+
